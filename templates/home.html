@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/static/images/home.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui;
+        }
+        .container {
+            background-color: rgba(0, 255, 187, 0.5);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+        .container h1 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px black;
+}
+        .btn {
+            background-color: #000000;
+            color: rgb(255, 2, 158);
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #fbfcff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to IPL MATCH PREDICTION</h1>
+        <a href="/users/login/" class="btn">Login</a>
+        <a href="/users/register/" class="btn">Register</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Match Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("{% static 'images/live.webp' %}") no-repeat center center fixed;
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .nav-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-btn:hover {
+            background-color: #333;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.5);  
+            border-radius: 12px;
+            padding: 25px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(141, 255, 2, 0.2);
+            text-align: center;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 26px;
+            color: #000000c5;
+        }
+
+        .card p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        @media (max-width: 600px) {
+            .nav-btn {
+                flex: 1 1 45%;
+                text-align: center;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="nav-btn">Leader Board</a>
+        <a href="#" class="nav-btn">Upcoming Matches</a>
+        <a href="#" class="nav-btn">Player Info</a>
+        <a href="#" class="nav-btn">Previous Results</a>
+        <a href="#" class="nav-btn">Sign Out</a>
+    </nav>
+
+    <div class="card">
+        <h2>LIVE MATCH STATUS</h2>
+        <p><strong>TEAM 1</strong> vs <strong>TEAM 2</strong></p>
+        <p>Win %: TEAM 1 - 55% | TEAM 2 - 45%</p>
+        <p>Start: 16th March 2025, 5:00 PM</p>
+        <p>End: 16th March 2025, 8:00 PM</p>
+    </div>
+
+    <div class="card">
+        <h2>Upcoming Matches</h2>
+        <p><strong>TEAM 3</strong> vs <strong>TEAM 4</strong></p>
+        <p>Date: 17th March 2025 | Time: 6:00 PM</p>
+    </div>
+</body>
+</html>
